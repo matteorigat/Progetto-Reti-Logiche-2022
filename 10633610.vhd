@@ -5,14 +5,14 @@ use ieee.std_logic_unsigned.all;
 
 entity project_reti_logiche is
      Port( 
-            i_clk     : in  std_logic; 					    -- Segnale di CLOCK in ingresso dal TestBench
-            i_start   : in  std_logic;					    -- Segnale di START generato dal TestBench
-            i_rst     : in  std_logic;				        -- Segnale di RESET che inizializza la macchina pronta per ricevere il primo segnale di START
+            i_clk     : in  std_logic; 					-- Segnale di CLOCK in ingresso dal TestBench
+            i_start   : in  std_logic;					-- Segnale di START generato dal TestBench
+            i_rst     : in  std_logic;				     -- Segnale di RESET che inizializza la macchina pronta per ricevere il primo segnale di START
             i_data    : in  std_logic_vector(7 downto 0);	-- Segnale che arriva dalla memoria in seguito ad una richiesta di lettura
             o_address : out std_logic_vector(15 downto 0);	-- Segnale di uscita che manda l'indirizzo alla memoria
-            o_done    : out std_logic;					    -- Segnale di uscita che comunica la fine dell'elaborazione e il dato di uscita scritto in memoria
-            o_en      : out std_logic;					    -- Segnale di ENABLE da dover mandare alla memoria per poter comunicare(sia in lettura che scrittura)
-            o_we      : out std_logic;					    -- Segnale WRITE ENABLE da dover mandare alla memoria per poter scriverci.
+            o_done    : out std_logic;					-- Segnale di uscita che comunica la fine dell'elaborazione e il dato di uscita scritto in memoria
+            o_en      : out std_logic;					-- Segnale di ENABLE da dover mandare alla memoria per poter comunicare(sia in lettura che scrittura)
+            o_we      : out std_logic;					-- Segnale WRITE ENABLE da dover mandare alla memoria per poter scriverci.
             o_data    : out std_logic_vector (7 downto 0) 	-- Segnale di uscita dal componente verso la memoria 
         );
 end project_reti_logiche;
